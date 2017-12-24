@@ -14,10 +14,8 @@ config.got_ip_cb = function (got_ip)
    end
 end
 
-local 
-
 print("Configuring Wifi ...")
-wifi.setmode(wifi.STATION);
+wifi.setmode(wifi.STATION)
 wifi.sta.getap(function (aps)
       if aps then
          for key,value in pairs(aps) do

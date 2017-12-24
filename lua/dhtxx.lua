@@ -1,6 +1,6 @@
 dhtxx_pin = 5
 dhtxx_timer = 1
-tmr.alarm(1, 5000, tmr.ALARM_AUTO, function ()
+tmr.alarm(dhtxx_timer, 5000, tmr.ALARM_AUTO, function ()
              local status, temp, humi, temp_dec, humi_dec = dht.read(dhtxx_pin)
              print("----------------------------------------")
              if status == dht.OK then
